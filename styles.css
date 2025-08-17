@@ -1,0 +1,117 @@
+:root {
+  --bg: #0b0f14;
+  --panel: #0f141b;
+  --text: #e5e7eb;
+  --muted: #93a4b3;
+  --brand: #d22b2b; /* Psalms red */
+  --brand-strong: #b71c1c;
+  --border: #1f2a33;
+  --ring: #ef9a9a;
+}
+html[data-theme="light"] {
+  --bg: #ffffff;
+  --panel: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --brand: #d22b2b;
+  --brand-strong: #b71c1c;
+  --border: #e2e8f0;
+  --ring: #ef5350;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(1200px 600px at 20% -10%, color-mix(in oklab, var(--brand) 20%, transparent), transparent 60%), var(--bg);
+  line-height: 1.6;
+}
+
+/* 접근성 */
+.skip-to-content { position: absolute; left: -999px; top: -999px; }
+.skip-to-content:focus {
+  left: 1rem; top: 1rem; z-index: 1000;
+  background: var(--brand); color: white; padding: .5rem .75rem; border-radius: .375rem;
+}
+
+/* 레이아웃 */
+.container { max-width: 1100px; padding: 0 20px; margin: 0 auto; }
+.section { padding: 84px 0; }
+.section-header { text-align: center; margin-bottom: 28px; }
+.section-header p { color: var(--muted); max-width: 60ch; margin: 8px auto 0; }
+
+/* 헤더 */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: linear-gradient(180deg, rgba(11,15,20,.9), rgba(11,15,20,.6));
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.brand { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--text); font-weight: 800; }
+.brand-name { letter-spacing: .2px; }
+.menu { display: flex; gap: .6rem; align-items: center; list-style: none; margin: 0; padding: 0; }
+.menu a { color: var(--text); text-decoration: none; padding: .5rem .75rem; border-radius: .5rem; }
+.menu a:hover, .menu a:focus { background: color-mix(in oklab, var(--brand) 18%, transparent); }
+.nav-toggle { display: none; background: none; border: 1px solid var(--border); color: var(--text); padding: .4rem .6rem; border-radius: .5rem; }
+.mode-toggle { background: none; border: 1px solid var(--border); padding: .4rem .6rem; border-radius: .5rem; color: var(--text); cursor: pointer; }
+
+/* 히어로 */
+.hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: center; padding: 72px 0 40px; }
+.hero h1 { font-size: clamp(28px, 4vw, 48px); line-height: 1.2; margin: 0 0 12px; }
+.hero .lead { color: var(--muted); margin: 0 0 20px; }
+.hero .accent { color: var(--brand); }
+.hero-illu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.hero-card { aspect-ratio: 1 / 1; border: 1px solid var(--border); border-radius: 16px; display: grid; place-items: center; background: linear-gradient(180deg, color-mix(in oklab, var(--panel) 80%, transparent), color-mix(in oklab, var(--bg) 80%, transparent)); font-weight: 800; }
+
+/* 카드/그리드 */
+.card { background: linear-gradient(180deg, color-mix(in oklab, var(--panel) 85%, transparent), color-mix(in oklab, var(--bg) 85%, transparent)); border: 1px solid var(--border); border-radius: 16px; padding: 20px; box-shadow: 0 12px 30px rgba(0,0,0,.08); }
+.about-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+
+/* 포트폴리오 그리드 */
+.filters { display: flex; gap: 8px; justify-content: center; margin-top: 14px; }
+.filter { border: 1px solid var(--border); background: transparent; color: var(--text); padding: .5rem .75rem; border-radius: 999px; cursor: pointer; }
+.filter.active { background: var(--brand); border-color: var(--brand-strong); color: #fff; }
+.grid.works { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 12px; }
+.work-card { overflow: hidden; border-radius: 14px; border: 1px solid var(--border); background: #000; }
+.work-card img { width: 100%; height: 220px; object-fit: cover; display: block; transition: transform .4s ease; }
+.work-card:hover img { transform: scale(1.05); }
+.work-card figcaption { padding: 12px; background: var(--panel); }
+.meta { color: var(--muted); font-size: .9rem; margin: 6px 0 0; }
+
+/* 연락처 */
+.contact-wrap { display: grid; grid-template-columns: 1fr 1.1fr; gap: 18px; }
+.contact-card a { color: var(--text); }
+.contact-form { display: grid; gap: 12px; }
+input, textarea { width: 100%; padding: .8rem 1rem; border-radius: .6rem; border: 1px solid var(--border); background: var(--panel); color: var(--text); }
+input:focus, textarea:focus, .btn:focus, .mode-toggle:focus, .nav-toggle:focus { outline: 3px solid var(--ring); outline-offset: 2px; }
+
+/* 버튼 */
+.btn { display: inline-block; padding: .7rem 1rem; border-radius: .8rem; text-decoration: none; border: 1px solid var(--border); }
+.btn-primary { background: var(--brand); border-color: var(--brand-strong); color: white; }
+.btn-primary:hover { filter: brightness(1.05); }
+.btn-ghost { background: transparent; color: var(--text); }
+.btn-ghost:hover { background: color-mix(in oklab, var(--brand) 15%, transparent); }
+
+/* 푸터 */
+.site-footer { border-top: 1px solid var(--border); padding: 32px 0; margin-top: 40px; }
+.footer-grid { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.foot-links { display: flex; gap: 10px; list-style: none; padding: 0; margin: 0; }
+.foot-links a { color: var(--muted); text-decoration: none; }
+.foot-links a:hover { color: var(--text); }
+
+/* 반응형 */
+@media (max-width: 980px) {
+  .hero { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+  .grid.works { grid-template-columns: repeat(2, 1fr); }
+  .contact-wrap { grid-template-columns: 1fr; }
+  .nav-toggle { display: inline-flex; }
+  .menu { position: absolute; right: 20px; top: 68px; flex-direction: column; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 10px; display: none; }
+  .menu.open { display: flex; }
+}
+@media (max-width: 520px) {
+  .grid.works { grid-template-columns: 1fr; }
+}
