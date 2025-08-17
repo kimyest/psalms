@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Psalms Design — 포트폴리오</title>
+  <meta name="description" content="Psalms Design — 음반, 책, 상품 디자인 전문 스튜디오 포트폴리오">
+  <meta name="theme-color" content="#c81e1e">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:title" content="Psalms Design — 포트폴리오">
+  <meta property="og:description" content="음반 · 책 · 상품 디자인">
+  <link rel="icon" href="assets/logo.jpeg">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-to-content" href="#main">본문으로 건너뛰기</a>
+
+  <header class="site-header" role="banner">
+    <nav class="container nav" aria-label="주요">
+      <a class="brand" href="#home">
+        <!-- 로고 이미지가 없다면 아래 img는 그냥 비어있어도 됩니다 -->
+        <img src="assets/logo.jpeg" alt="Psalms Design 로고" width="36" height="36" decoding="async">
+        <span class="brand-name">Psalms Design</span>
+      </a>
+      <button class="nav-toggle" aria-controls="menu" aria-expanded="false" aria-label="메뉴 열기">☰</button>
+      <ul id="menu" class="menu" role="menubar">
+        <li role="none"><a role="menuitem" href="#about">소개</a></li>
+        <li role="none"><a role="menuitem" href="#work">포트폴리오</a></li>
+        <li role="none"><a role="menuitem" href="#clients">클라이언트</a></li>
+        <li role="none"><a role="menuitem" href="#contact">문의</a></li>
+        <li role="none"><button class="mode-toggle" aria-pressed="false" title="다크 모드">🌓</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="home" class="hero container">
+      <div class="hero-copy">
+        <h1><span class="accent">Psalms Design</span>은<br>음반 · 책 · 상품 디자인을<br>만드는 스튜디오입니다.</h1>
+        <p class="lead">브랜드의 목소리를 시각으로 번역합니다. 포트폴리오 중심의 원스크롤 사이트.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#work">작업 보기</a>
+          <a class="btn btn-ghost" href="#contact">프로젝트 상담</a>
+        </div>
+      </div>
+      <div class="hero-illu" aria-hidden="true">
+        <div class="hero-card"><span>Album</span></div>
+        <div class="hero-card"><span>Book</span></div>
+        <div class="hero-card"><span>Product</span></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <header class="section-header">
+        <h2>소개</h2>
+        <p>우리는 내용과 형태의 균형을 중시합니다. 음악과 문학, 제품의 맥락을 깊이 이해하고 기획부터 제작까지 함께합니다.</p>
+      </header>
+      <div class="about-grid">
+        <article class="card">
+          <h3>음반 디자인</h3>
+          <p>앨범 커버, 패키지, 바이닐/씨디 인쇄물. 아티스트 서사를 시각으로 풀어냅니다.</p>
+        </article>
+        <article class="card">
+          <h3>책 디자인</h3>
+          <p>표지 &amp; 내지, 시리즈 룩앤필, 전자책 아트워크. 독서 경험을 흐트러뜨리지 않는 타이포그래피.</p>
+        </article>
+        <article class="card">
+          <h3>상품 디자인</h3>
+          <p>브랜드 굿즈, 라벨/패키지, 키트. 생산/후가공까지 고려한 현실적인 설계.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="section container">
+      <header class="section-header">
+        <h2>포트폴리오</h2>
+        <p>필터로 타입을 선택하세요.</p>
+        <div class="filters" role="tablist" aria-label="포트폴리오 필터">
+          <button class="filter active" data-filter="all" role="tab" aria-selected="true">전체</button>
+          <button class="filter" data-filter="album" role="tab">음반</button>
+          <button class="filter" data-filter="book" role="tab">책</button>
+          <button class="filter" data-filter="product" role="tab">상품</button>
+        </div>
+      </header>
+
+      <div class="grid works">
+        <!-- 샘플 카드: 실제 이미지/텍스트로 교체하세요 -->
+        <figure class="work-card album">
+          <img src="https://picsum.photos/seed/album1/1200/900" alt="앨범 커버 예시">
+          <figcaption>
+            <h3>Blue Hours — Single</h3>
+            <p class="meta">Album · 2024</p>
+          </figcaption>
+        </figure>
+        <figure class="work-card book">
+          <img src="https://picsum.photos/seed/book1/1200/900" alt="책 디자인 예시">
+          <figcaption>
+            <h3>산책의 기술</h3>
+            <p class="meta">Book · 2023</p>
+          </figcaption>
+        </figure>
+        <figure class="work-card product">
+          <img src="https://picsum.photos/seed/product1/1200/900" alt="상품 디자인 예시">
+          <figcaption>
+            <h3>콜드브루 패키지</h3>
+            <p class="meta">Product · 2024</p>
+          </figcaption>
+        </figure>
+        <figure class="work-card album">
+          <img src="https://picsum.photos/seed/album2/1200/900" alt="앨범 패키지 예시">
+          <figcaption>
+            <h3>Autumn Lines — EP</h3>
+            <p class="meta">Album · 2022</p>
+          </figcaption>
+        </figure>
+        <figure class="work-card book">
+          <img src="https://picsum.photos/seed/book2/1200/900" alt="에세이 표지 예시">
+          <figcaption>
+            <h3>서늘한 오후</h3>
+            <p class="meta">Book · 2021</p>
+          </figcaption>
+        </figure>
+        <figure class="work-card product">
+          <img src="https://picsum.photos/seed/product2/1200/900" alt="라벨 디자인 예시">
+          <figcaption>
+            <h3>허브티 라벨</h3>
+            <p class="meta">Product · 2023</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CLIENTS -->
+    <section id="clients" class="section container">
+      <header class="section-header">
+        <h2>클라이언트</h2>
+        <p>인디 레이블, 출판사, 브랜드와 협업해 왔습니다.</p>
+      </header>
+      <ul class="logo-row">
+        <li>Indie Label A</li>
+        <li>Publisher B</li>
+        <li>Brand C</li>
+        <li>Studio D</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <header class="section-header">
+        <h2>문의</h2>
+        <p>프로젝트 의뢰와 포트폴리오 원본 요청은 아래로 연락 주세요.</p>
+      </header>
+      <div class="contact-wrap">
+        <div class="card contact-card">
+          <h3>이메일</h3>
+          <p><a href="mailto:hello@psalms.design">hello@psalms.design</a></p>
+          <h3>인스타그램</h3>
+          <p><a href="https://instagram.com/" target="_blank" rel="noopener">instagram.com/psalmsdesign</a></p>
+        </div>
+        <!-- GitHub Pages 사용 시 Formspree 같은 서비스로 action 교체 권장 -->
+        <form name="contact" class="contact-form" method="POST">
+          <!-- 예: <form action="https://formspree.io/f/폼ID" method="POST"> -->
+          <label>이름
+            <input type="text" name="name" required>
+          </label>
+          <label>이메일
+            <input type="email" name="email" required>
+          </label>
+          <label>메시지
+            <textarea name="message" rows="6" required placeholder="프로젝트 내용/일정/예산 등을 알려주세요."></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">보내기</button>
+          <p class="form-note">* GitHub Pages에서는 폼이 바로 전송되지 않습니다. <a href="#contact">Formspree</a>를 연결하세요.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="assets/logo.jpeg" alt="Psalms Design" width="28" height="28">
+        <p>© <span id="year"></span> Psalms Design. All rights reserved.</p>
+      </div>
+      <nav aria-label="푸터">
+        <ul class="foot-links">
+          <li><a href="#about">소개</a></li>
+          <li><a href="#work">포트폴리오</a></li>
+          <li><a href="#contact">문의</a></li>
+          <li><a href="#" rel="nofollow">개인정보 처리방침</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
